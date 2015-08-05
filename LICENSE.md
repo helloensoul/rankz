@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) 2015 Valentino Cossar
+Copyright (c) 2015 Ensoul
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
