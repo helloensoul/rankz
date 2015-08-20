@@ -69,7 +69,7 @@ wp plugin activate rankz
   `add_theme_support('rankz-admin-login', 'ensoul.it', '#E41B44');`
 * **Bootstrap Nav walker**<br>
   `add_theme_support('rankz-bootstrap-nav-walker');`
-  Replace this code in your templates/header.php.
+  Replace your templates/header.php with the code below:<br>
   ```html
   <header class="banner navbar navbar-default navbar-static-top" role="banner">
     <div class="container">
