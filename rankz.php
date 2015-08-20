@@ -2,7 +2,7 @@
 /*
 Plugin Name:        Rankz
 Plugin URI:         http://ensoul.it/
-Description:        A WordPress plugin which contains a bunch of customizations for Wordpress themes.
+Description:        A WordPress plugin which contains a bunch of customizations for Shaba WordPress theme.
 Version:            1.0.0
 Author:             Ensoul
 Author URI:         http://ensoul.it/
@@ -43,7 +43,7 @@ class Options {
     $this->options = $options;
   }
 }
-//require_once __DIR__ . '/lib/utils.php';
+
 function load_modules() {
   global $_wp_theme_features;
   foreach (glob(__DIR__ . '/modules/*.php') as $file) {
