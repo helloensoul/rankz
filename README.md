@@ -70,7 +70,7 @@ wp plugin activate rankz
 * **Bootstrap Nav walker**<br>
   `add_theme_support('rankz-bootstrap-nav-walker');`
   Replace this code in your templates/header.php.
-  ```php
+  ```html
   <header class="banner navbar navbar-default navbar-static-top" role="banner">
     <div class="container">
       <div class="navbar-header">
