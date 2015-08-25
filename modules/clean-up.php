@@ -61,6 +61,15 @@ function remove_customize_admin_bar() {
 }
 add_action('wp_before_admin_bar_render', __NAMESPACE__ . '\\remove_customize_admin_bar');
 
+// Remove core update notice for non admin users
+function remove_update_notice() {
+  if (!current_user_can('update_core')) {
+    remove_action( 'admin_notices', 'update_nag', 3 );
+    remove_action( 'network_admin_notices', 'update_nag', 3 );
+  }
+}
+add_action('admin_init', __NAMESPACE__ . '\\remove_update_notice');
+
 // Change dashboard footer
 function dashboard_footer() {
   echo '<span id="footer-thankyou">Using Shaba responsive theme by <a href="http://www.ensoul.it">Ensoul</a>.</span>';
