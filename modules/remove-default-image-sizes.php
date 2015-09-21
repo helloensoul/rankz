@@ -2,7 +2,6 @@
 
 namespace Ensoul\Rankz\RemoveDefaultImageSizes;
 
-
 // Remove default wordpress image sizes
 function remove_default_image_sizes( $sizes) {
     unset( $sizes['thumbnail']);

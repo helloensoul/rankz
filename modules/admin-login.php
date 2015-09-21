@@ -2,7 +2,6 @@
 
 namespace Ensoul\Rankz\AdminLogin;
 
-
 // Change logo url
 function login_logo_url(){
   $url = options('url');

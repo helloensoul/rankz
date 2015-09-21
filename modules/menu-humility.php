@@ -2,7 +2,6 @@
 
 namespace Ensoul\Rankz\MenuHumility;
 
-
 /**
  * Menu Humility plugin
  *

@@ -2,7 +2,6 @@
 
 namespace Ensoul\Rankz\CleanUp;
 
-
 /**
  * Remove unnecessary dashboard widgets
  *

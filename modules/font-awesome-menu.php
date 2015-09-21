@@ -2,7 +2,6 @@
 
 namespace Ensoul\Rankz\FontAwesomeMenu;
 
-
 /**
  * Font Awesome icons on menus
  */

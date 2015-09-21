@@ -1,3 +1,6 @@
+### 1.1.0: Sept 21th, 2015
+* Added support for `add_theme_support('rankz-google-analytics);` with anonymizeIp for european Cookie Law
+
 ### 1.0.0: Aug 3rd, 2015
 * Added `add_theme_support('rankz-init');` for first Shaba setup
 * Added `add_theme_support('rankz-clean-up');`, a bunch of functions to clean up WordPress dashboard

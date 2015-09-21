@@ -3,7 +3,7 @@
 Plugin Name:        Rankz
 Plugin URI:         http://ensoul.it/
 Description:        A WordPress plugin which contains a bunch of customizations for Shaba WordPress theme.
-Version:            1.0.0
+Version:            1.1.0
 Author:             Ensoul
 Author URI:         http://ensoul.it/
 License:            MIT License

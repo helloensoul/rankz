@@ -67,6 +67,8 @@ wp plugin activate rankz
   `add_theme_support('rankz-font-awesome-menu');`
 * **Admin login**<br>
   `add_theme_support('rankz-admin-login', 'ensoul.it', '#E41B44');`
+* **Google Analytics** ([more info](https://github.com/itsensoul/rankz/wiki/Google-Analytics))<br>
+  `add_theme_support('rankz-google-analytics', 'UA-XXXXX-Y');`
 * **Bootstrap Nav walker**<br>
   `add_theme_support('rankz-bootstrap-nav-walker');`<br>
   Replace your templates/header.php with the code below:

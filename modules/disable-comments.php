@@ -2,7 +2,6 @@
 
 namespace Ensoul\Rankz\DisableComments;
 
-
 // Disable support for comments and trackbacks in post types
 function remove_comments_post_types_support() {
   $post_types = get_post_types();

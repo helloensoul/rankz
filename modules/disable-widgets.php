@@ -2,7 +2,6 @@
 
 namespace Ensoul\Rankz\DisableWidgets;
 
-
 // Remove widgets page from admin menu
 function remove_widgets_admin_menu() {
   remove_submenu_page('themes.php', 'widgets.php');

@@ -2,7 +2,6 @@
 
 namespace Ensoul\Rankz\BootstrapNavWalker;
 
-
 /**
  * Cleaner walker for wp_nav_menu()
  *
