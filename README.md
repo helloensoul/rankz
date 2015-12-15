@@ -71,7 +71,7 @@ wp plugin activate rankz
   `add_theme_support('rankz-bootstrap-nav-walker');`<br>
   Replace your templates/header.php with the code below:
   ```html
-  <header class="banner navbar navbar-default navbar-static-top" role="banner">
+  <header class="banner navbar navbar-default navbar-static-top">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -85,7 +85,7 @@ wp plugin activate rankz
         </a>
       </div>
 
-      <nav class="collapse navbar-collapse" role="navigation">
+      <nav class="collapse navbar-collapse">
         <?php
         if (has_nav_menu('primary_navigation')) :
           wp_nav_menu(['theme_location' => 'primary_navigation', 'walker' => new Ensoul\Rankz\BootstrapNavWalker\NavWalker(), 'menu_class' => 'nav navbar-nav']);
