@@ -38,7 +38,7 @@ function init() {
 
     // Setup primary menu with home page
     $menu_exists = wp_get_nav_menu_object('Primary Navigation');
-    if(!$menu_exists){
+    if (!$menu_exists) {
       // Create primary_navigation menu
       $menu_id = wp_create_nav_menu('Primary Navigation');
       // Assign primary_navigation to nav menu location created in init.php
@@ -71,5 +71,3 @@ function admin_color($user_id) {
   update_user_meta($user_id, 'admin_color', 'midnight');
 }
 add_action('user_register', __NAMESPACE__ . '\\admin_color');
-
-

@@ -6,7 +6,7 @@ namespace Ensoul\Rankz\DisableComments;
 function remove_comments_post_types_support() {
   $post_types = get_post_types();
   foreach ($post_types as $post_type) {
-    if(post_type_supports($post_type, 'comments')) {
+    if (post_type_supports($post_type, 'comments')) {
       remove_post_type_support($post_type, 'comments');
       remove_post_type_support($post_type, 'trackbacks');
     }
@@ -39,7 +39,8 @@ add_action('admin_menu', __NAMESPACE__ . '\\remove_comments_admin_menu');
 function comments_admin_menu_redirect() {
   global $pagenow;
   if (($pagenow === 'edit-comments.php') || ($pagenow === 'options-discussion.php')) {
-    wp_redirect(admin_url()); exit;
+    wp_redirect(admin_url());
+    exit;
   }
 }
 add_action('admin_init', __NAMESPACE__ . '\\comments_admin_menu_redirect');
