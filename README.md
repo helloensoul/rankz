@@ -31,7 +31,7 @@ You can install this plugin via the command-line or the WordPress admin panel.
 If you're [using Composer to manage WordPress](https://roots.io/using-composer-with-wordpress/), add Rankz to your project's dependencies.
 
 ```sh
-composer require ensoul/rankz 1.0.0
+composer require ensoul/rankz 1.1.0
 ```
 
 Then activate the plugin via [wp-cli](http://wp-cli.org/commands/plugin/activate/).
