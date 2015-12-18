@@ -1,4 +1,4 @@
-###HEAD
+### 1.2.0: Dec 18th, 2015
 * Move Bootstrap Nav Walker functions to utils.php ([#8](https://github.com/roots/soil/issues/8))
 * Improve modules comments ([#7](https://github.com/roots/soil/issues/7))
 * Remove nav walker closure ([#6](https://github.com/roots/soil/issues/6))
