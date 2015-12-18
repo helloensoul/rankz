@@ -1,5 +1,6 @@
 # Rankz
 [![Build Status](https://travis-ci.org/itsensoul/rankz.svg?branch=master)](https://travis-ci.org/itsensoul/rankz)
+
 A WordPress plugin which contains a bunch of customizations for Shaba WordPress theme.
 
 ## Requirements
