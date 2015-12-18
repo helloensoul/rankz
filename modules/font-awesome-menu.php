@@ -6,7 +6,7 @@ namespace Ensoul\Rankz\FontAwesomeMenu;
  * Font Awesome icons on menus
  */
 class FontAwesomeMenu {
-  function menu($nav){
+  public function menu($nav){
     $menu_item = preg_replace_callback(
       '/(<li[^>]+class=")([^"]+)("?[^>]+>[^>]+>)([^<]+)<\/a>/',
       array( $this, 'replace' ),
@@ -15,7 +15,7 @@ class FontAwesomeMenu {
     return $menu_item;
   }
 
-  function replace($a){
+  public function replace($a){
     $start = $a[ 1 ];
     $classes = $a[ 2 ];
     $rest = $a[ 3 ];
@@ -50,7 +50,7 @@ class FontAwesomeMenu {
     return $item;
   }
 
-  function shortcode_icon($atts){
+  public function shortcodeIcon($atts){
     extract(shortcode_atts(array(
       'class' => '',
     ), $atts));
@@ -69,7 +69,7 @@ class FontAwesomeMenu {
     }
   }
 
-  function shortcode_stack($atts, $content = null){
+  public function shortcodeStack($atts, $content = null){
     extract(shortcode_atts(array(
       'class' => '',
     ), $atts));
@@ -90,10 +90,10 @@ class FontAwesomeMenu {
     return '<span class="'.implode(' ', $class_array).'">'.do_shortcode($content).'</span>';
   }
 
-  function __construct(){
+  public function __construct(){
     add_filter('wp_nav_menu', array( $this, 'menu' ), 10, 2);
-    add_shortcode('fa', array( $this, 'shortcode_icon' ));
-    add_shortcode('fa-stack', array( $this, 'shortcode_stack' ));
+    add_shortcode('fa', array( $this, 'shortcodeIcon' ));
+    add_shortcode('fa-stack', array( $this, 'shortcodeStack' ));
   }
 }
 $font_awesome_menu = new FontAwesomeMenu();
