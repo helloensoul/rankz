@@ -2,6 +2,8 @@
 
 namespace Ensoul\Rankz\BootstrapNavWalker;
 
+use Ensoul\Rankz\Utils;
+
 /**
  * Cleaner walker for wp_nav_menu()
  *
@@ -58,7 +60,7 @@ class NavWalker extends \Walker_Nav_Menu {
     if ($element->is_dropdown) {
       $element->classes[] = 'dropdown';
       foreach ($children_elements[$element->ID] as $child) {
-        if ($child->current_item_parent || url_compare($this->archive, $child->url)) {
+        if ($child->current_item_parent || Utils\url_compare($this->archive, $child->url)) {
           $element->classes[] = 'active';
         }
       }
@@ -77,7 +79,7 @@ class NavWalker extends \Walker_Nav_Menu {
     // Fix core `active` behavior for custom post types
     if ($this->cpt) {
       $classes = str_replace('current_page_parent', '', $classes);
-      if (url_compare($this->archive, $item->url)) {
+      if (Utils\url_compare($this->archive, $item->url)) {
         $classes[] = 'active';
       }
     }
@@ -115,30 +117,3 @@ function nav_menu_args($args = '') {
 }
 add_filter('wp_nav_menu_args', __NAMESPACE__ . '\\nav_menu_args');
 add_filter('nav_menu_item_id', '__return_null');
-
-/**
- * Make a URL relative
- */
-function root_relative_url($input) {
-  preg_match('|https?://([^/]+)(/.*)|i', $input, $matches);
-  if (!isset($matches[1]) || !isset($matches[2])) {
-    return $input;
-  } elseif (($matches[1] === $_SERVER['SERVER_NAME']) || $matches[1] === $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT']) {
-    return wp_make_link_relative($input);
-  } else {
-    return $input;
-  }
-}
-
-/**
- * Compare URL against relative URL
- */
-function url_compare($url, $rel) {
-  $url = trailingslashit($url);
-  $rel = trailingslashit($rel);
-  if ((strcasecmp($url, $rel) === 0) || root_relative_url($url) == $rel) {
-    return true;
-  } else {
-    return false;
-  }
-}
