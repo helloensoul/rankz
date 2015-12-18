@@ -1,4 +1,5 @@
 ###HEAD
+* Remove nav walker closure ([#6](https://github.com/roots/soil/issues/6))
 * Adding `.menu-item` class to all `<li>` tags in walker and spaces fix in other files ([#5](https://github.com/roots/soil/issues/5))
 * Support placeholder links ([#4](https://github.com/roots/soil/issues/4))
 * Add priority for loading modules (compatibility with Shaba 1.2.0+) ([#3](https://github.com/roots/soil/issues/3))
