@@ -1,4 +1,5 @@
 ###HEAD
+* Add support for Travis CI and fixes for ruleset.xml ([#1](https://github.com/roots/soil/issues/1)) ([#2](https://github.com/roots/soil/issues/2))
 * Remove `add_theme_support('rankz-menu-humility);` module
 * Update README.md
 
