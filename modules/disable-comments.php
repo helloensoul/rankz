@@ -2,6 +2,12 @@
 
 namespace Ensoul\Rankz\DisableComments;
 
+/**
+ *
+ * You can enable/disable this feature in functions.php (or lib/setup.php if you're using Shaba):
+ * add_theme_support('rankz-disable-comments');
+ */
+
 // Disable support for comments and trackbacks in post types
 function remove_comments_post_types_support() {
   $post_types = get_post_types();

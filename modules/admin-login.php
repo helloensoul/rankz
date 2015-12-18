@@ -2,6 +2,13 @@
 
 namespace Ensoul\Rankz\AdminLogin;
 
+/**
+ * Customize Wordpress login page
+ *
+ * You can enable/disable this feature in functions.php (or lib/setup.php if you're using Shaba):
+ * add_theme_support('rankz-admin-login');
+ */
+
 // Change logo url
 function login_logo_url(){
   $url = options('url');
