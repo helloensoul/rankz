@@ -2,6 +2,13 @@
 
 namespace Ensoul\Rankz\RemoveDefaultImageSizes;
 
+/**
+ *
+ * You can enable/disable this feature in functions.php (or lib/setup.php if you're using Shaba):
+ * add_theme_support('rankz-remove-default-image-sizes');
+ */
+
+
 // Remove default wordpress image sizes
 function remove_default_image_sizes($sizes) {
     unset($sizes['thumbnail']);
@@ -17,7 +24,7 @@ function remove_media_admin_menu() {
 }
 add_action('admin_menu', __NAMESPACE__ . '\\remove_media_admin_menu');
 
-// Redirect any user trying to access media page
+// Redirect any user trying to access options-media page
 function media_admin_menu_redirect() {
   global $pagenow;
   if ($pagenow === 'options-media.php') {

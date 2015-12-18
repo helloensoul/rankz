@@ -6,9 +6,10 @@ namespace Ensoul\Rankz\GoogleAnalytics;
  * Google Analytics snippet from HTML5 Boilerplate
  *
  * Cookie domain is 'auto' configured. See: http://goo.gl/VUCHKM
- * You can enable/disable this feature in functions.php (or lib/config.php if you're using Sage):
+ * You can enable/disable this feature in functions.php (or lib/setup.php if you're using Shaba):
  * add_theme_support('rankz-google-analytics', 'UA-XXXXX-Y', 'wp_footer');
  */
+
 function load_script() {
   $gaID = options('gaID');
   if (!$gaID) { return; }

@@ -2,6 +2,12 @@
 
 namespace Ensoul\Rankz\DisableWidgets;
 
+/**
+ *
+ * You can enable/disable this feature in functions.php (or lib/setup.php if you're using Shaba):
+ * add_theme_support('rankz-disable-widgets');
+ */
+
 // Remove widgets page from admin menu
 function remove_widgets_admin_menu() {
   remove_submenu_page('themes.php', 'widgets.php');

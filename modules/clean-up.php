@@ -6,7 +6,10 @@ namespace Ensoul\Rankz\CleanUp;
  * Remove unnecessary dashboard widgets
  *
  * @link http://www.deluxeblogtips.com/2011/01/remove-dashboard-widgets-in-wordpress.html
+ * You can enable/disable this feature in functions.php (or lib/setup.php if you're using Shaba):
+ * add_theme_support('rankz-clean-up');
  */
+
 function remove_dashboard_widgets() {
   remove_action('welcome_panel', 'wp_welcome_panel'); // Hide Welcome Panel
   remove_meta_box('dashboard_primary', 'dashboard', 'side'); // Hide WordPress News

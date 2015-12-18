@@ -2,6 +2,12 @@
 
 namespace Ensoul\Rankz\Init;
 
+/**
+ *
+ * You can enable/disable this feature in functions.php (or lib/setup.php if you're using Shaba):
+ * add_theme_support('rankz-init');
+ */
+
 // Rankz options for first activation
 function init() {
   // Check if rankz_activation already exists and if not sets theme options

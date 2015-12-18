@@ -4,7 +4,11 @@ namespace Ensoul\Rankz\FontAwesomeMenu;
 
 /**
  * Font Awesome icons on menus
+ *
+ * You can enable/disable this feature in functions.php (or lib/setup.php if you're using Shaba):
+ * add_theme_support('rankz-font-awesome-menu');
  */
+
 class FontAwesomeMenu {
   public function menu($nav){
     $menu_item = preg_replace_callback(

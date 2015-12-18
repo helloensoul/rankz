@@ -12,7 +12,11 @@ namespace Ensoul\Rankz\BootstrapNavWalker;
  * NavWalker example output:
  *   <li class="menu-home"><a href="/">Home</a></li>
  *   <li class="menu-sample-page"><a href="/sample-page/">Sample Page</a></li>
+ *
+ * You can enable/disable this feature in functions.php (or lib/setup.php if you're using Shaba):
+ * add_theme_support('rankz-bootstrap-nav-walker');
  */
+
 class NavWalker extends \Walker_Nav_Menu {
   private $cpt; // Boolean, is current post a custom post type
   private $archive; // Stores the archive page for current URL
