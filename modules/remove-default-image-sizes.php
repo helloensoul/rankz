@@ -3,10 +3,10 @@
 namespace Ensoul\Rankz\RemoveDefaultImageSizes;
 
 // Remove default wordpress image sizes
-function remove_default_image_sizes( $sizes) {
-    unset( $sizes['thumbnail']);
-    unset( $sizes['medium']);
-    unset( $sizes['large']);
+function remove_default_image_sizes($sizes) {
+    unset($sizes['thumbnail']);
+    unset($sizes['medium']);
+    unset($sizes['large']);
     return $sizes;
 }
 add_filter('intermediate_image_sizes_advanced', __NAMESPACE__ . '\\remove_default_image_sizes');
@@ -21,7 +21,8 @@ add_action('admin_menu', __NAMESPACE__ . '\\remove_media_admin_menu');
 function media_admin_menu_redirect() {
   global $pagenow;
   if ($pagenow === 'options-media.php') {
-    wp_redirect(admin_url()); exit;
+    wp_redirect(admin_url());
+    exit;
   }
 }
 add_action('admin_init', __NAMESPACE__ . '\\media_admin_menu_redirect');

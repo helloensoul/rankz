@@ -12,7 +12,8 @@ add_action('admin_menu', __NAMESPACE__ . '\\remove_widgets_admin_menu');
 function widgets_admin_menu_redirect() {
   global $pagenow;
   if ($pagenow === 'widgets.php') {
-    wp_redirect(admin_url()); exit;
+    wp_redirect(admin_url());
+    exit;
   }
 }
 add_action('admin_init', __NAMESPACE__ . '\\widgets_admin_menu_redirect');

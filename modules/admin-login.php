@@ -5,7 +5,7 @@ namespace Ensoul\Rankz\AdminLogin;
 // Change logo url
 function login_logo_url(){
   $url = options('url');
-  if((empty($url)) || ($url == 1)){
+  if ((empty($url)) || ($url == 1)) {
     $url = 'ensoul.it';
   }
   return $url;
@@ -15,7 +15,7 @@ add_filter('login_headerurl', __NAMESPACE__ . '\\login_logo_url');
 // Change logo path and styles
 function login_styles() {
   $color = options('color');
-  if((empty($color)) || ($color == 1)){
+  if ((empty($color)) || ($color == 1)) {
     $color = '#E41B44';
   }
   echo '<style type="text/css">
@@ -90,14 +90,14 @@ function adjustBrightness($hex, $steps) {
   // Normalize into a six character long hex string
   $hex = str_replace('#', '', $hex);
   if (strlen($hex) == 3) {
-    $hex = str_repeat(substr($hex,0,1), 2).str_repeat(substr($hex,1,1), 2).str_repeat(substr($hex,2,1), 2);
+    $hex = str_repeat(substr($hex, 0, 1), 2).str_repeat(substr($hex, 1, 1), 2).str_repeat(substr($hex, 2, 1), 2);
   }
   // Split into three parts: R, G and B
   $color_parts = str_split($hex, 2);
   $return = '#';
   foreach ($color_parts as $color) {
     $color   = hexdec($color); // Convert to decimal
-    $color   = max(0,min(255,$color + $steps)); // Adjust color
+    $color   = max(0, min(255, $color + $steps)); // Adjust color
     $return .= str_pad(dechex($color), 2, '0', STR_PAD_LEFT); // Make two char hex code
   }
   return $return;

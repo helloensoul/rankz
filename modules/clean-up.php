@@ -8,7 +8,7 @@ namespace Ensoul\Rankz\CleanUp;
  * @link http://www.deluxeblogtips.com/2011/01/remove-dashboard-widgets-in-wordpress.html
  */
 function remove_dashboard_widgets() {
-  remove_action( 'welcome_panel', 'wp_welcome_panel' ); // Hide Welcome Panel
+  remove_action('welcome_panel', 'wp_welcome_panel'); // Hide Welcome Panel
   remove_meta_box('dashboard_primary', 'dashboard', 'side'); // Hide WordPress News
   remove_meta_box('dashboard_quick_press', 'dashboard', 'side'); // Hide Quick Draft
   remove_meta_box('dashboard_right_now', 'dashboard', 'normal'); // Hide At a Glance
@@ -18,16 +18,16 @@ add_action('admin_init', __NAMESPACE__ . '\\remove_dashboard_widgets');
 
 // Clean posts
 function clean_posts() {
-  remove_meta_box('trackbacksdiv' , 'post' , 'normal');
-  remove_meta_box('postcustom' , 'post' , 'normal');
-  remove_meta_box('slugdiv' , 'post' , 'normal');
+  remove_meta_box('trackbacksdiv', 'post', 'normal');
+  remove_meta_box('postcustom', 'post', 'normal');
+  remove_meta_box('slugdiv', 'post', 'normal');
 }
 add_action('admin_menu', __NAMESPACE__ . '\\clean_posts');
 
 // Clean pages
 function clean_pages() {
-  remove_meta_box('postcustom' , 'page' , 'normal');
-  remove_meta_box('slugdiv' , 'page' , 'normal');
+  remove_meta_box('postcustom', 'page', 'normal');
+  remove_meta_box('slugdiv', 'page', 'normal');
 }
 add_action('admin_menu', __NAMESPACE__ . '\\clean_pages');
 
@@ -42,7 +42,8 @@ add_action('admin_menu', __NAMESPACE__ . '\\remove_customization_theme');
 function customize_admin_menu_redirect() {
   global $pagenow;
   if ($pagenow === 'customize.php') {
-    wp_redirect(admin_url()); exit;
+    wp_redirect(admin_url());
+    exit;
   }
 }
 add_action('admin_init', __NAMESPACE__ . '\\customize_admin_menu_redirect');
@@ -63,8 +64,8 @@ add_action('wp_before_admin_bar_render', __NAMESPACE__ . '\\remove_customize_adm
 // Remove core update notice for non admin users
 function remove_update_notice() {
   if (!current_user_can('update_core')) {
-    remove_action( 'admin_notices', 'update_nag', 3 );
-    remove_action( 'network_admin_notices', 'update_nag', 3 );
+    remove_action('admin_notices', 'update_nag', 3);
+    remove_action('network_admin_notices', 'update_nag', 3);
   }
 }
 add_action('admin_init', __NAMESPACE__ . '\\remove_update_notice');
