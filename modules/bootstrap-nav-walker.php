@@ -16,6 +16,7 @@ namespace Ensoul\Rankz\BootstrapNavWalker;
 class NavWalker extends \Walker_Nav_Menu {
   private $cpt; // Boolean, is current post a custom post type
   private $archive; // Stores the archive page for current URL
+
   public function __construct() {
     add_filter('nav_menu_css_class', array($this, 'cssClasses'), 10, 2);
     add_filter('nav_menu_item_id', '__return_null');
@@ -23,13 +24,16 @@ class NavWalker extends \Walker_Nav_Menu {
     $this->cpt     = in_array($cpt, get_post_types(array('_builtin' => false)));
     $this->archive = get_post_type_archive_link($cpt);
   }
+
   public function checkCurrent($classes) {
     return preg_match('/(current[-_])|active|dropdown/', $classes);
   }
+
   // @codingStandardsIgnoreStart
   function start_lvl(&$output, $depth = 0, $args = []) {
     $output .= "\n<ul class=\"dropdown-menu\">\n";
   }
+
   function start_el(&$output, $item, $depth = 0, $args = [], $id = 0) {
     $item_html = '';
     parent::start_el($item_html, $item, $depth, $args);
@@ -44,6 +48,7 @@ class NavWalker extends \Walker_Nav_Menu {
     $item_html = apply_filters('rankz/wp_nav_menu_item', $item_html);
     $output .= $item_html;
   }
+
   function display_element($element, &$children_elements, $max_depth, $depth = 0, $args, &$output) {
     $element->is_dropdown = ((!empty($children_elements[$element->ID]) && (($depth + 1) < $max_depth || ($max_depth === 0))));
     if ($element->is_dropdown) {
@@ -61,17 +66,25 @@ class NavWalker extends \Walker_Nav_Menu {
     parent::display_element($element, $children_elements, $max_depth, $depth, $args, $output);
   }
   // @codingStandardsIgnoreEnd
+
   public function cssClasses($classes, $item) {
     $slug = sanitize_title($item->title);
+
+    // Fix core `active` behavior for custom post types
     if ($this->cpt) {
       $classes = str_replace('current_page_parent', '', $classes);
       if (url_compare($this->archive, $item->url)) {
         $classes[] = 'active';
       }
     }
+
+    // Remove most core classes
     $classes = preg_replace('/(current(-menu-|[-_]page[-_])(item|parent|ancestor))/', 'active', $classes);
     $classes = preg_replace('/^((menu|page)[-_\w+]+)+/', '', $classes);
-    $classes[] = 'menu-' . $slug;
+
+    // Re-add core `menu-item` class and add `menu-<slug>` class
+    $classes[] = 'menu-item menu-' . $slug;
+
     $classes = array_unique($classes);
     return array_filter($classes, function ($element) {
       $element = trim($element);

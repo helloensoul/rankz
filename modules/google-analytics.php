@@ -29,6 +29,7 @@ function load_script() {
   <?php endif; ?>
 <?php
 }
+
 function options($option = null) {
   static $options;
   if (!isset($options)) {
@@ -38,5 +39,7 @@ function options($option = null) {
   }
   return is_null($option) ? $options : $options[$option];
 }
+
 $hook = options('hook');
+
 add_action($hook, __NAMESPACE__ . '\\load_script', 20);
