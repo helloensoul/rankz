@@ -1,4 +1,5 @@
 ###HEAD
+* Add priority for loading modules (compatibility with Shaba 1.2.0+) ([#3](https://github.com/roots/soil/issues/3))
 * Add support for Travis CI and fixes for ruleset.xml ([#1](https://github.com/roots/soil/issues/1)) ([#2](https://github.com/roots/soil/issues/2))
 * Remove `add_theme_support('rankz-menu-humility);` module
 * Update README.md
