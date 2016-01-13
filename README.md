@@ -55,10 +55,14 @@ wp plugin activate rankz
   `add_theme_support('rankz-init');`
 * **Clean WordPress**<br>
   `add_theme_support('rankz-clean-up');`
+* **Disable WordPress customization**<br>
+  `add_theme_support('rankz-disable-customization');`
+* **Remove core update notice for non admin users**<br>
+  `add_theme_support('rankz-remove-update-notice');`
 * **Disable comments**<br>
   `add_theme_support('rankz-disable-comments');`
-* **Disable editors**<br>
-  `add_theme_support('rankz-disable-editors');`
+* **Add support for validate ACF fields with Yoast SEO plugin (> 3.0)**<br>
+  `add_theme_support('rankz-yoast-seo-acf');`
 * **Disable widgets**<br>
   `add_theme_support('rankz-disable-widgets');`
 * **Remove WordPress default image sizes**<br>

@@ -4,7 +4,7 @@ namespace Ensoul\Rankz\Init;
 
 /**
  *
- * You can enable/disable this feature in functions.php (or lib/setup.php if you're using Shaba):
+ * You can enable/disable this feature in functions.php (or lib/setup.php if you're using Sage):
  * add_theme_support('rankz-init');
  */
 
@@ -53,8 +53,7 @@ function init() {
         'post_content'  => 'Home page content.',
         'post_status'   => 'publish',
         'post_title'    => 'Home',
-        'post_type'     => 'page',
-        'page_template' => 'template-home.php'
+        'post_type'     => 'page'
       ];
       if ($home_page_id = wp_insert_post($home_page_options, false)) {
         update_option('show_on_front', 'page');
