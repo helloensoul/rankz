@@ -13,7 +13,7 @@ function init() {
   // Check if rankz_activation already exists and if not sets theme options
   if (!get_option('rankz_activation')) {
 
-    // Change shaba_activtion value
+    // Change rankz_activtion value
     add_option('rankz_activation', 'actived');
 
     // Change admin email

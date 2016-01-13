@@ -1,7 +1,7 @@
 # Rankz
 [![Build Status](https://travis-ci.org/itsensoul/rankz.svg?branch=master)](https://travis-ci.org/itsensoul/rankz)
 
-A WordPress plugin which contains a bunch of customizations for Shaba WordPress theme.
+A WordPress plugin which contains a bunch of customizations for Sage WordPress theme.
 
 ## Requirements
 
@@ -81,7 +81,7 @@ wp plugin activate rankz
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only"><?= __('Toggle navigation', 'shaba'); ?></span>
+          <span class="sr-only"><?= __('Toggle navigation', 'sage'); ?></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
