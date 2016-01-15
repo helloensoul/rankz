@@ -3,7 +3,7 @@
 Plugin Name:        Rankz
 Plugin URI:         http://ensoul.it/
 Description:        A WordPress plugin which contains a bunch of customizations for Sage WordPress theme.
-Version:            1.2.0
+Version:            1.2.1
 Author:             Ensoul
 Author URI:         http://ensoul.it/
 License:            MIT License
