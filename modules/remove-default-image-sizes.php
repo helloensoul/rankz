@@ -4,7 +4,7 @@ namespace Ensoul\Rankz\RemoveDefaultImageSizes;
 
 /**
  *
- * You can enable/disable this feature in functions.php (or lib/setup.php if you're using Shaba):
+ * You can enable/disable this feature in functions.php (or lib/setup.php if you're using Sage):
  * add_theme_support('rankz-remove-default-image-sizes');
  */
 

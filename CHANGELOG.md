@@ -1,3 +1,12 @@
+### 1.2.1: Jan 15th, 2016
+* Remove useless functions in init module ([#10](https://github.com/roots/soil/issues/10))
+* Remove `template-home.php` as default page template for the home page in init module ([#10](https://github.com/roots/soil/issues/10))
+* Split clean-up module in three different modules([#10](https://github.com/roots/soil/issues/10))
+* Add support for validate ACF fields with Yoast SEO plugin (> 3.0) ([#10](https://github.com/roots/soil/issues/10))
+* Remove disable-editor functions in favor of bedrock default settings ([#10](https://github.com/roots/soil/issues/10))
+* Remove `dashboard_footer` function in clean-up module ([#10](https://github.com/roots/soil/issues/10))
+* Update README.md ([#10](https://github.com/roots/soil/issues/10))
+
 ### 1.2.0: Dec 18th, 2015
 * Move Bootstrap Nav Walker functions to utils.php ([#8](https://github.com/roots/soil/issues/8))
 * Improve modules comments ([#7](https://github.com/roots/soil/issues/7))

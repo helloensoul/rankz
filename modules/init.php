@@ -4,7 +4,7 @@ namespace Ensoul\Rankz\Init;
 
 /**
  *
- * You can enable/disable this feature in functions.php (or lib/setup.php if you're using Shaba):
+ * You can enable/disable this feature in functions.php (or lib/setup.php if you're using Sage):
  * add_theme_support('rankz-init');
  */
 
@@ -13,28 +13,14 @@ function init() {
   // Check if rankz_activation already exists and if not sets theme options
   if (!get_option('rankz_activation')) {
 
-    // Change shaba_activtion value
+    // Change rankz_activtion value
     add_option('rankz_activation', 'actived');
-
-    // Change admin email
-    update_option('admin_email', 'hello@ensoul.it');
-
-    // Change time zone
-    update_option('timezone_string', 'Europe/Rome');
 
     // Change default users role
     update_option('default_role', 'editor');
 
     // Change default blog description
     update_option('blogdescription', '');
-
-    // Change default admin color on first user
-    update_user_meta(1, 'admin_color', 'midnight');
-
-    // Change permalink structure
-    global $wp_rewrite;
-    $wp_rewrite->set_permalink_structure('/%postname%/');
-    $wp_rewrite->flush_rules();
 
     // Delete WordPress default post
     wp_delete_post(1, true);
@@ -53,8 +39,7 @@ function init() {
         'post_content'  => 'Home page content.',
         'post_status'   => 'publish',
         'post_title'    => 'Home',
-        'post_type'     => 'page',
-        'page_template' => 'template-home.php'
+        'post_type'     => 'page'
       ];
       if ($home_page_id = wp_insert_post($home_page_options, false)) {
         update_option('show_on_front', 'page');
@@ -71,9 +56,3 @@ function init() {
   }
 }
 init();
-
-// Change user color
-function admin_color($user_id) {
-  update_user_meta($user_id, 'admin_color', 'midnight');
-}
-add_action('user_register', __NAMESPACE__ . '\\admin_color');

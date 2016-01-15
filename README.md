@@ -1,7 +1,7 @@
 # Rankz
 [![Build Status](https://travis-ci.org/itsensoul/rankz.svg?branch=master)](https://travis-ci.org/itsensoul/rankz)
 
-A WordPress plugin which contains a bunch of customizations for Shaba WordPress theme.
+A WordPress plugin which contains a bunch of customizations for Sage WordPress theme.
 
 ## Requirements
 
@@ -33,7 +33,7 @@ You can install this plugin via the command-line or the WordPress admin panel.
 If you're [using Composer to manage WordPress](https://roots.io/using-composer-with-wordpress/), add Rankz to your project's dependencies.
 
 ```sh
-composer require ensoul/rankz 1.2.0
+composer require ensoul/rankz 1.2.1
 ```
 
 Then activate the plugin via [wp-cli](http://wp-cli.org/commands/plugin/activate/).
@@ -55,10 +55,14 @@ wp plugin activate rankz
   `add_theme_support('rankz-init');`
 * **Clean WordPress**<br>
   `add_theme_support('rankz-clean-up');`
+* **Disable WordPress customization**<br>
+  `add_theme_support('rankz-disable-customization');`
+* **Remove core update notice for non admin users**<br>
+  `add_theme_support('rankz-remove-update-notice');`
 * **Disable comments**<br>
   `add_theme_support('rankz-disable-comments');`
-* **Disable editors**<br>
-  `add_theme_support('rankz-disable-editors');`
+* **Add support for validate ACF fields with Yoast SEO plugin (> 3.0)**<br>
+  `add_theme_support('rankz-yoast-seo-acf');`
 * **Disable widgets**<br>
   `add_theme_support('rankz-disable-widgets');`
 * **Remove WordPress default image sizes**<br>
@@ -77,7 +81,7 @@ wp plugin activate rankz
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only"><?= __('Toggle navigation', 'shaba'); ?></span>
+          <span class="sr-only"><?= __('Toggle navigation', 'sage'); ?></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
