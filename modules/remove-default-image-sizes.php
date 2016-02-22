@@ -13,6 +13,7 @@ namespace Ensoul\Rankz\RemoveDefaultImageSizes;
 function remove_default_image_sizes($sizes) {
     unset($sizes['thumbnail']);
     unset($sizes['medium']);
+    unset($sizes['medium_large']);
     unset($sizes['large']);
     return $sizes;
 }
