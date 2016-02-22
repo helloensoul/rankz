@@ -1,3 +1,6 @@
+### HEAD
+* Remove default image size `medium_large` that was implemented with WordPress 4.4 ([#11](https://github.com/roots/soil/issues/11))
+
 ### 1.2.1: Jan 15th, 2016
 * Remove useless functions in init module ([#10](https://github.com/roots/soil/issues/10))
 * Remove `template-home.php` as default page template for the home page in init module ([#10](https://github.com/roots/soil/issues/10))
