@@ -1,4 +1,4 @@
-### HEAD
+### 1.2.3: Mar 30th, 2016
 * Fix for admin-login css according to the new buttons design of the latest WordPress version ([#12](https://github.com/itsensoul/rankz/issues/12))
 
 ### 1.2.2: Feb 22nd, 2016
