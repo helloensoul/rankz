@@ -1,3 +1,6 @@
+### HEAD
+* Fix for admin-login css according to the new buttons design of the latest WordPress version ([#12](https://github.com/itsensoul/rankz/issues/12))
+
 ### 1.2.2: Feb 22nd, 2016
 * Remove default image size `medium_large` that was implemented with WordPress 4.4 ([#11](https://github.com/itsensoul/rankz/issues/11))
 

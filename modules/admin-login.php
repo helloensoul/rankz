@@ -49,22 +49,48 @@ function login_styles() {
     .login .message {
       border-left: 4px solid #7ad03a;
     }
-    input[type=text]:focus, input[type=password]:focus {
+    input[type=text]:focus, input[type=password]:focus, input[type=radio]:focus, input[type=checkbox]:focus {
+      outline: none;
       border-color: '.$color.';
       -webkit-box-shadow: 0 0 2px '.$color.';
+         -moz-box-shadow: 0 0 2px '.$color.';
+          -ms-box-shadow: 0 0 2px '.$color.';
+           -o-box-shadow: 0 0 2px '.$color.';
               box-shadow: 0 0 2px '.$color.';
     }
-    .wp-core-ui .button-primary {
+    .wp-core-ui .button-primary, .wp-core-ui .button-primary:visited {
+      outline: none;
+      color: #fff;
+      text-decoration: none;
       background: '.$color.';
-      border-color: '.adjustBrightness($color, -50).';
-      -webkit-box-shadow: inset 0 1px 0 '.adjustBrightness($color, 40).',0 1px 0 rgba(0,0,0,.15);
-              box-shadow: inset 0 1px 0 '.adjustBrightness($color, 40).',0 1px 0 rgba(0,0,0,.15);
+      border-color: '.adjustBrightness($color, -50).' '.adjustBrightness($color, -60).' '.adjustBrightness($color, -60).';
+      text-shadow: 0 -1px 1px '.adjustBrightness($color, -40).',1px 0 1px '.adjustBrightness($color, -40).',0 1px 1px '.adjustBrightness($color, -40).',-1px 0 1px '.adjustBrightness($color, -40).';
+      -webkit-box-shadow: 0 1px 0 '.adjustBrightness($color, -40).';
+         -moz-box-shadow: 0 1px 0 '.adjustBrightness($color, -40).';
+          -ms-box-shadow: 0 1px 0 '.adjustBrightness($color, -40).';
+           -o-box-shadow: 0 1px 0 '.adjustBrightness($color, -40).';
+              box-shadow: 0 1px 0 '.adjustBrightness($color, -40).';
     }
-    .wp-core-ui .button-primary:hover {
+    .wp-core-ui .button-primary:hover, .wp-core-ui .button-primary:focus {
+      color: #fff;
+      background: '.adjustBrightness($color, 10).';
+      border-color: '.adjustBrightness($color, -60).';
+    }
+    .wp-core-ui .button-primary:focus {
+      -webkit-box-shadow: 0 1px 0 '.adjustBrightness($color, -50).',0 0 2px 1px '.adjustBrightness($color, 10).';
+         -moz-box-shadow: 0 1px 0 '.adjustBrightness($color, -50).',0 0 2px 1px '.adjustBrightness($color, 10).';
+          -ms-box-shadow: 0 1px 0 '.adjustBrightness($color, -50).',0 0 2px 1px '.adjustBrightness($color, 10).';
+           -o-box-shadow: 0 1px 0 '.adjustBrightness($color, -50).',0 0 2px 1px '.adjustBrightness($color, 10).';
+              box-shadow: 0 1px 0 '.adjustBrightness($color, -50).',0 0 2px 1px '.adjustBrightness($color, 10).';
+    }
+    .wp-core-ui .button-primary:active {
       background: '.adjustBrightness($color, -20).';
-      border-color: '.adjustBrightness($color, -70).';
-      -webkit-box-shadow: inset 0 1px 0 '.adjustBrightness($color, 30).',0 1px 0 rgba(0,0,0,.15);
-              box-shadow: inset 0 1px 0 '.adjustBrightness($color, 30).',0 1px 0 rgba(0,0,0,.15);
+      border-color: '.adjustBrightness($color, -60).';
+      -webkit-box-shadow: inset 0 2px 0 '.adjustBrightness($color, -60).';
+         -moz-box-shadow: inset 0 2px 0 '.adjustBrightness($color, -60).';
+          -ms-box-shadow: inset 0 2px 0 '.adjustBrightness($color, -60).';
+           -o-box-shadow: inset 0 2px 0 '.adjustBrightness($color, -60).';
+              box-shadow: inset 0 2px 0 '.adjustBrightness($color, -60).';
     }
     .login #nav a:hover, .login #backtoblog a:hover {
       color: '.$color.';
