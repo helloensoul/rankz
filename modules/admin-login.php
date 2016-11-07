@@ -9,7 +9,9 @@ namespace Ensoul\Rankz\AdminLogin;
  * add_theme_support('rankz-admin-login');
  */
 
-// Change logo url
+/**
+ * Change logo url
+ */
 function login_logo_url(){
   $url = options('url');
   if ((empty($url)) || ($url == 1)) {
@@ -19,7 +21,9 @@ function login_logo_url(){
 }
 add_filter('login_headerurl', __NAMESPACE__ . '\\login_logo_url');
 
-// Change logo path and styles
+/**
+ * Change logo path and styles
+ */
 function login_styles() {
   $color = options('color');
   if ((empty($color)) || ($color == 1)) {
@@ -105,7 +109,9 @@ function login_styles() {
 }
 add_action('login_head', __NAMESPACE__ . '\\login_styles');
 
-// Options function to get add_theme_support attributes
+/**
+ * Options function to get add_theme_support attributes
+ */
 function options($option) {
   static $options;
   if (!isset($options)) {
@@ -116,7 +122,9 @@ function options($option) {
   return $options[$option];
 }
 
-// adjustBrightness function to get darker and ligher colors
+/**
+ * Function to get darker and ligher colors
+ */
 function adjustBrightness($hex, $steps) {
   // Steps should be between -255 and 255. Negative = darker, positive = lighter
   $steps = max(-255, min(255, $steps));
@@ -129,9 +137,12 @@ function adjustBrightness($hex, $steps) {
   $color_parts = str_split($hex, 2);
   $return = '#';
   foreach ($color_parts as $color) {
-    $color   = hexdec($color); // Convert to decimal
-    $color   = max(0, min(255, $color + $steps)); // Adjust color
-    $return .= str_pad(dechex($color), 2, '0', STR_PAD_LEFT); // Make two char hex code
+    // Convert to decimal
+    $color   = hexdec($color);
+    // Adjust color
+    $color   = max(0, min(255, $color + $steps));
+    // Make two char hex code
+    $return .= str_pad(dechex($color), 2, '0', STR_PAD_LEFT);
   }
   return $return;
 }

@@ -107,12 +107,15 @@ class NavWalker extends \Walker_Nav_Menu {
 function nav_menu_args($args = '') {
   $nav_menu_args = [];
   $nav_menu_args['container'] = false;
+
   if (!$args['items_wrap']) {
     $nav_menu_args['items_wrap'] = '<ul class="%2$s">%3$s</ul>';
   }
+
   if (!$args['depth']) {
     $nav_menu_args['depth'] = 2;
   }
+
   return array_merge($args, $nav_menu_args);
 }
 add_filter('wp_nav_menu_args', __NAMESPACE__ . '\\nav_menu_args');

@@ -8,26 +8,19 @@ namespace Ensoul\Rankz\Init;
  * add_theme_support('rankz-init');
  */
 
-// Rankz options for first activation
 function init() {
   // Check if rankz_activation already exists and if not sets theme options
   if (!get_option('rankz_activation')) {
-
     // Change rankz_activtion value
     add_option('rankz_activation', 'actived');
-
     // Change default users role
     update_option('default_role', 'editor');
-
     // Change default blog description
     update_option('blogdescription', '');
-
     // Delete WordPress default post
     wp_delete_post(1, true);
-
     // Delete WordPress default page
     wp_delete_post(2, true);
-
     // Setup primary menu with home page
     $menu_exists = wp_get_nav_menu_object('Primary Navigation');
     if (!$menu_exists) {

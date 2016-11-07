@@ -10,7 +10,9 @@ namespace Ensoul\Rankz\CleanUp;
  * add_theme_support('rankz-clean-up');
  */
 
-// Remove unnecessary dashboard widgets
+/**
+ * Remove unnecessary dashboard widgets
+ */
 function remove_dashboard_widgets() {
   remove_action('welcome_panel', 'wp_welcome_panel'); // Hide Welcome Panel
   remove_meta_box('dashboard_primary', 'dashboard', 'side'); // Hide WordPress News
@@ -20,14 +22,18 @@ function remove_dashboard_widgets() {
 }
 add_action('admin_init', __NAMESPACE__ . '\\remove_dashboard_widgets');
 
-// Clean posts
+/**
+ * Clean posts
+ */
 function clean_posts() {
   remove_meta_box('trackbacksdiv', 'post', 'normal');
   remove_meta_box('postcustom', 'post', 'normal');
 }
 add_action('admin_menu', __NAMESPACE__ . '\\clean_posts');
 
-// Clean pages
+/**
+ * Clean pages
+ */
 function clean_pages() {
   remove_meta_box('postcustom', 'page', 'normal');
 }
