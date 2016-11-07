@@ -1,3 +1,10 @@
+### 2.0.0: Nov 7th, 2016
+* Add .gitattributes
+* Travis updates
+* Use `home_url` in `root_relative_url`
+* Remove support for Yoast SEO ACF
+* Delete `remove_meta_box('slugdiv', 'page/post', 'normal');` from the clean-up module
+
 ### 1.2.3: Mar 30th, 2016
 * Fix for admin-login css according to the new buttons design of the latest WordPress version
 

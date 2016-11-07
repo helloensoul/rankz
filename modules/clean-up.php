@@ -24,13 +24,11 @@ add_action('admin_init', __NAMESPACE__ . '\\remove_dashboard_widgets');
 function clean_posts() {
   remove_meta_box('trackbacksdiv', 'post', 'normal');
   remove_meta_box('postcustom', 'post', 'normal');
-  remove_meta_box('slugdiv', 'post', 'normal');
 }
 add_action('admin_menu', __NAMESPACE__ . '\\clean_posts');
 
 // Clean pages
 function clean_pages() {
   remove_meta_box('postcustom', 'page', 'normal');
-  remove_meta_box('slugdiv', 'page', 'normal');
 }
 add_action('admin_menu', __NAMESPACE__ . '\\clean_pages');

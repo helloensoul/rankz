@@ -6,14 +6,28 @@ namespace Ensoul\Rankz\Utils;
  * Make a URL relative
  */
 function root_relative_url($input) {
-  preg_match('|https?://([^/]+)(/.*)|i', $input, $matches);
-  if (!isset($matches[1]) || !isset($matches[2])) {
-    return $input;
-  } elseif (($matches[1] === $_SERVER['SERVER_NAME']) || $matches[1] === $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT']) {
-    return wp_make_link_relative($input);
-  } else {
+  if (is_feed()) {
     return $input;
   }
+
+  $url = parse_url($input);
+  if (!isset($url['host']) || !isset($url['path'])) {
+    return $input;
+  }
+  $site_url = parse_url(network_home_url());  // falls back to home_url
+
+  if (!isset($url['scheme'])) {
+    $url['scheme'] = $site_url['scheme'];
+  }
+  $hosts_match = $site_url['host'] === $url['host'];
+  $schemes_match = $site_url['scheme'] === $url['scheme'];
+  $ports_exist = isset($site_url['port']) && isset($url['port']);
+  $ports_match = ($ports_exist) ? $site_url['port'] === $url['port'] : true;
+
+  if ($hosts_match && $schemes_match && $ports_match) {
+    return wp_make_link_relative($input);
+  }
+  return $input;
 }
 
 /**
@@ -22,11 +36,7 @@ function root_relative_url($input) {
 function url_compare($url, $rel) {
   $url = trailingslashit($url);
   $rel = trailingslashit($rel);
-  if ((strcasecmp($url, $rel) === 0) || root_relative_url($url) == $rel) {
-    return true;
-  } else {
-    return false;
-  }
+  return ((strcasecmp($url, $rel) === 0) || root_relative_url($url) == $rel);
 }
 
 /**

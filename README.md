@@ -1,5 +1,7 @@
 # Rankz
-[![Build Status](https://travis-ci.org/itsensoul/rankz.svg?branch=master)](https://travis-ci.org/itsensoul/rankz)
+[![Packagist](https://img.shields.io/packagist/v/ensoul/rankz.svg?style=flat-square)](https://packagist.org/packages/ensoul/rankz)
+[![Packagist Downloads](https://img.shields.io/packagist/dt/ensoul/rankz.svg?style=flat-square)](https://packagist.org/packages/ensoul/rankz)
+[![Build Status](https://img.shields.io/travis/itsensoul/rankz.svg?style=flat-square)](https://travis-ci.org/itsensoul/rankz)
 
 A WordPress plugin which contains a bunch of customizations for Sage WordPress theme.
 
@@ -33,7 +35,7 @@ You can install this plugin via the command-line or the WordPress admin panel.
 If you're [using Composer to manage WordPress](https://roots.io/using-composer-with-wordpress/), add Rankz to your project's dependencies.
 
 ```sh
-composer require ensoul/rankz 1.2.3
+composer require ensoul/rankz 2.0.0
 ```
 
 Then activate the plugin via [wp-cli](http://wp-cli.org/commands/plugin/activate/).
@@ -53,26 +55,34 @@ wp plugin activate rankz
 
 * **Rankz first setup**<br>
   `add_theme_support('rankz-init');`
+
 * **Clean WordPress**<br>
   `add_theme_support('rankz-clean-up');`
+
 * **Disable WordPress customization**<br>
   `add_theme_support('rankz-disable-customization');`
+
 * **Remove core update notice for non admin users**<br>
   `add_theme_support('rankz-remove-update-notice');`
+
 * **Disable comments**<br>
   `add_theme_support('rankz-disable-comments');`
-* **Add support for validate ACF fields with Yoast SEO plugin (> 3.0)**<br>
-  `add_theme_support('rankz-yoast-seo-acf');`
+
 * **Disable widgets**<br>
   `add_theme_support('rankz-disable-widgets');`
+
 * **Remove WordPress default image sizes**<br>
   `add_theme_support('rankz-remove-default-image-sizes');`
+
 * **Font Awesome icons on menus**<br>
   `add_theme_support('rankz-font-awesome-menu');`
+
 * **Admin login**<br>
   `add_theme_support('rankz-admin-login', 'ensoul.it', '#E41B44');`
-* **Google Analytics** ([more info](https://github.com/itsensoul/rankz/wiki/Google-Analytics))<br>
+
+* **Google Analytics with anonymized IP** ([more info](https://github.com/itsensoul/rankz/wiki/Google-Analytics))<br>
   `add_theme_support('rankz-google-analytics', 'UA-XXXXX-Y');`
+
 * **Bootstrap Nav walker**<br>
   `add_theme_support('rankz-bootstrap-nav-walker');`<br>
   Replace your templates/header.php with the code below:

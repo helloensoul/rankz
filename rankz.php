@@ -1,11 +1,12 @@
 <?php
 /*
 Plugin Name:        Rankz
-Plugin URI:         http://ensoul.it/
+Plugin URI:         https://github.com/itsensoul/rankz
 Description:        A WordPress plugin which contains a bunch of customizations for Sage WordPress theme.
-Version:            1.2.3
+Version:            2.0.0
 Author:             Ensoul
-Author URI:         http://ensoul.it/
+Author URI:         https://ensoul.it
+
 License:            MIT License
 License URI:        http://opensource.org/licenses/MIT
 */
@@ -15,18 +16,21 @@ namespace Ensoul\Rankz;
 class Options {
   protected static $modules = [];
   protected $options = [];
+
   public static function init($module, $options = []) {
     if (!isset(self::$modules[$module])) {
       self::$modules[$module] = new static((array) $options);
     }
     return self::$modules[$module];
   }
+
   public static function getByFile($file) {
     if (file_exists($file) || file_exists(__DIR__ . '/modules/' . $file)) {
       return self::get('rankz-' . basename($file, '.php'));
     }
     return [];
   }
+
   public static function get($module) {
     if (isset(self::$modules[$module])) {
       return self::$modules[$module]->options;
@@ -36,9 +40,11 @@ class Options {
     }
     return [];
   }
+
   protected function __construct($options) {
     $this->set($options);
   }
+
   public function set($options) {
     $this->options = $options;
   }
