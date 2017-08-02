@@ -3,7 +3,7 @@
   "type": "wordpress-plugin",
   "license": "MIT",
   "description": "A WordPress plugin which contains a bunch of customizations for Sage WordPress theme.",
-  "homepage": "https://github.com/itsensoul/rankz",
+  "homepage": "https://github.com/helloensoul/rankz",
   "authors": [
     {
       "name": "Ensoul",
@@ -15,7 +15,7 @@
     "wordpress"
   ],
   "support": {
-    "issues": "https://github.com/itsensoul/rankz/issues"
+    "issues": "https://github.com/helloensoul/rankz/issues"
   },
   "require": {
     "php": ">=5.4.0",

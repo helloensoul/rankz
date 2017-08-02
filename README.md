@@ -1,7 +1,7 @@
 # Rankz
 [![Packagist](https://img.shields.io/packagist/v/ensoul/rankz.svg?style=flat-square)](https://packagist.org/packages/ensoul/rankz)
 [![Packagist Downloads](https://img.shields.io/packagist/dt/ensoul/rankz.svg?style=flat-square)](https://packagist.org/packages/ensoul/rankz)
-[![Build Status](https://img.shields.io/travis/itsensoul/rankz.svg?style=flat-square)](https://travis-ci.org/itsensoul/rankz)
+[![Build Status](https://img.shields.io/travis/helloensoul/rankz.svg?style=flat-square)](https://travis-ci.org/helloensoul/rankz)
 
 A WordPress plugin which contains a bunch of customizations for Sage WordPress theme.
 
@@ -46,7 +46,7 @@ wp plugin activate rankz
 
 ### via WordPress Admin Panel
 
-1. Download the [latest zip](https://github.com/itsensoul/rankz/releases/latest) of this repo.
+1. Download the [latest zip](https://github.com/helloensoul/rankz/releases/latest) of this repo.
 2. In your WordPress admin panel, navigate to Plugins->Add New
 3. Click Upload Plugin
 4. Upload the zip file that you downloaded.
@@ -80,7 +80,7 @@ wp plugin activate rankz
 * **Admin login**<br>
   `add_theme_support('rankz-admin-login', 'ensoul.it', '#E41B44');`
 
-* **Google Analytics with anonymized IP** ([more info](https://github.com/itsensoul/rankz/wiki/Google-Analytics))<br>
+* **Google Analytics with anonymized IP** ([more info](https://github.com/helloensoul/rankz/wiki/Google-Analytics))<br>
   `add_theme_support('rankz-google-analytics', 'UA-XXXXX-Y');`
 
 * **Bootstrap Nav walker**<br>

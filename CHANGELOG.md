@@ -1,3 +1,6 @@
+### HEAD
+* Update `itsensoul` organization name with `helloensoul`
+
 ### 2.0.0: Nov 7th, 2016
 * Add .gitattributes
 * Travis updates
@@ -9,25 +12,25 @@
 * Fix for admin-login css according to the new buttons design of the latest WordPress version
 
 ### 1.2.2: Feb 22nd, 2016
-* Remove default image size `medium_large` that was implemented with WordPress 4.4 ([#11](https://github.com/itsensoul/rankz/issues/11))
+* Remove default image size `medium_large` that was implemented with WordPress 4.4 ([#11](https://github.com/helloensoul/rankz/issues/11))
 
 ### 1.2.1: Jan 15th, 2016
-* Remove useless functions in init module ([#10](https://github.com/itsensoul/rankz/issues/10))
-* Remove `template-home.php` as default page template for the home page in init module ([#10](https://github.com/itsensoul/rankz/issues/10))
-* Split clean-up module in three different modules([#10](https://github.com/itsensoul/rankz/issues/10))
-* Add support for validate ACF fields with Yoast SEO plugin (> 3.0) ([#10](https://github.com/itsensoul/rankz/issues/10))
-* Remove disable-editor functions in favor of bedrock default settings ([#10](https://github.com/itsensoul/rankz/issues/10))
-* Remove `dashboard_footer` function in clean-up module ([#10](https://github.com/itsensoul/rankz/issues/10))
-* Update README.md ([#10](https://github.com/itsensoul/rankz/issues/10))
+* Remove useless functions in init module ([#10](https://github.com/helloensoul/rankz/issues/10))
+* Remove `template-home.php` as default page template for the home page in init module ([#10](https://github.com/helloensoul/rankz/issues/10))
+* Split clean-up module in three different modules([#10](https://github.com/helloensoul/rankz/issues/10))
+* Add support for validate ACF fields with Yoast SEO plugin (> 3.0) ([#10](https://github.com/helloensoul/rankz/issues/10))
+* Remove disable-editor functions in favor of bedrock default settings ([#10](https://github.com/helloensoul/rankz/issues/10))
+* Remove `dashboard_footer` function in clean-up module ([#10](https://github.com/helloensoul/rankz/issues/10))
+* Update README.md ([#10](https://github.com/helloensoul/rankz/issues/10))
 
 ### 1.2.0: Dec 18th, 2015
-* Move Bootstrap Nav Walker functions to utils.php ([#8](https://github.com/itsensoul/rankz/issues/8))
-* Improve modules comments ([#7](https://github.com/itsensoul/rankz/issues/7))
-* Remove nav walker closure ([#6](https://github.com/itsensoul/rankz/issues/6))
-* Adding `.menu-item` class to all `<li>` tags in walker and spaces fix in other files ([#5](https://github.com/itsensoul/rankz/issues/5))
-* Support placeholder links ([#4](https://github.com/itsensoul/rankz/issues/4))
-* Add priority for loading modules (compatibility with Shaba 1.2.0+) ([#3](https://github.com/itsensoul/rankz/issues/3))
-* Add support for Travis CI and fixes for ruleset.xml ([#1](https://github.com/itsensoul/rankz/issues/1)) ([#2](https://github.com/itsensoul/rankz/issues/2))
+* Move Bootstrap Nav Walker functions to utils.php ([#8](https://github.com/helloensoul/rankz/issues/8))
+* Improve modules comments ([#7](https://github.com/helloensoul/rankz/issues/7))
+* Remove nav walker closure ([#6](https://github.com/helloensoul/rankz/issues/6))
+* Adding `.menu-item` class to all `<li>` tags in walker and spaces fix in other files ([#5](https://github.com/helloensoul/rankz/issues/5))
+* Support placeholder links ([#4](https://github.com/helloensoul/rankz/issues/4))
+* Add priority for loading modules (compatibility with Shaba 1.2.0+) ([#3](https://github.com/helloensoul/rankz/issues/3))
+* Add support for Travis CI and fixes for ruleset.xml ([#1](https://github.com/helloensoul/rankz/issues/1)) ([#2](https://github.com/helloensoul/rankz/issues/2))
 * Remove `add_theme_support('rankz-menu-humility);` module
 * Update README.md
 
