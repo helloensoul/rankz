@@ -67,35 +67,6 @@ wp plugin activate rankz
 * **Google Analytics with anonymized IP** ([more info](https://github.com/helloensoul/rankz/wiki/Google-Analytics))<br>
   `add_theme_support('rankz-google-analytics', 'UA-XXXXX-Y');`
 
-* **Bootstrap Nav walker**<br>
-  `add_theme_support('rankz-bootstrap-nav-walker');`<br>
-  Replace your templates/header.php with the code below:
-  ```html
-  <header class="banner navbar navbar-default navbar-static-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only"><?= __('Toggle navigation', 'sage'); ?></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>">
-          <img src="<?php echo get_template_directory_uri(); ?>/dist/images/logo.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/dist/images/logo.png'" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>">
-        </a>
-      </div>
-
-      <nav class="nav-primary collapse navbar-collapse">
-        <?php
-        if (has_nav_menu('primary_navigation')) :
-          wp_nav_menu(['theme_location' => 'primary_navigation', 'walker' => new Ensoul\Rankz\BootstrapNavWalker\NavWalker(), 'menu_class' => 'nav navbar-nav']);
-        endif;
-        ?>
-      </nav>
-    </div>
-  </header>
-  ```
-
 And in a format you can copy & paste into your theme:
 ```php
 /**
@@ -111,7 +82,6 @@ add_theme_support('rankz-remove-default-image-sizes');
 add_theme_support('rankz-font-awesome-menu');
 add_theme_support('rankz-admin-login', 'example.com', '#0085ba');
 add_theme_support('rankz-google-analytics', 'UA-XXXXX-Y');
-add_theme_support('rankz-bootstrap-nav-walker');
 ```
 
 ## Contributing
