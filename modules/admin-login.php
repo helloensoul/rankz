@@ -31,7 +31,7 @@ function login_styles() {
   }
   $logo_uri = get_theme_file_uri().'/dist/images/login-logo.png';
   $logo_path = get_theme_file_path().'/dist/images/login-logo.png';
-  if(file_exists($logo_path)) {
+  if (file_exists($logo_path)) {
     echo '<style type="text/css">
       #login h1 a {
         background: url('.$logo_uri.') no-repeat top center;
