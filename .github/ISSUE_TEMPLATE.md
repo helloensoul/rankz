@@ -1,6 +1,6 @@
 ## Submit a feature request or bug report
 
-- [ ] I've read the guidelines for Contributing to Rankz in the README.md
+- [ ] I've read the guidelines for Contributing to this project in the README.md
 - [ ] This is a feature request
 - [ ] This is a bug report
 - [ ] This request isn't a duplicate of an [existing issue](https://github.com/helloensoul/rankz/issues)
