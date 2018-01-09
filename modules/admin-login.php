@@ -29,19 +29,25 @@ function login_styles() {
   if ((empty($color)) || ($color == 1)) {
     $color = '#E41B44';
   }
+  $logo_uri = get_theme_file_uri().'/dist/images/login-logo.png';
+  $logo_path = get_theme_file_path().'/dist/images/login-logo.png';
+  if(file_exists($logo_path)) {
+    echo '<style type="text/css">
+      #login h1 a {
+        background: url('.$logo_uri.') no-repeat top center;
+        background-size: auto 100px;
+        height: 100px;
+        width: auto;
+        outline: none;
+        -webkit-transition: none;
+           -moz-transition: none;
+            -ms-transition: none;
+             -o-transition: none;
+                transition: none;
+      }
+    </style>';
+  }
   echo '<style type="text/css">
-    #login h1 a {
-      background: url('.get_template_directory_uri().'/dist/images/login-logo.png) no-repeat top center;
-      background-size: auto 100px;
-      height: 100px;
-      width: auto;
-      outline: none;
-      -webkit-transition: none;
-         -moz-transition: none;
-          -ms-transition: none;
-           -o-transition: none;
-              transition: none;
-    }
     #login h1 a:focus {
       color: transparent;
       -webkit-box-shadow: none;

@@ -7,24 +7,8 @@ A WordPress plugin which contains a bunch of customizations for Sage WordPress t
 
 ## Requirements
 
-<table>
-  <thead>
-    <tr>
-      <th>Prerequisite</th>
-      <th>How to check</th>
-      <th>How to install</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>PHP &gt;= 5.4.x</td>
-      <td><code>php -v</code></td>
-      <td>
-        <a href="http://php.net/manual/en/install.php">php.net</a>
-      </td>
-    </tr>
-  </tbody>
-</table>
+* [PHP](https://secure.php.net/manual/en/install.php) >= 5.4.x
+* [WordPress](https://wordpress.org/download/) >= 4.7.x
 
 ## Installation
 

@@ -1,3 +1,6 @@
+### HEAD
+* Improve `admin-login` module to work with [Sage 9](https://github.com/roots/sage)
+
 ### 2.1.0: Gen 9th, 2018
 * Update `itsensoul` organization name with `helloensoul`
 * Re-enable media page in WordPress settings
