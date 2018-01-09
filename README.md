@@ -55,9 +55,6 @@ wp plugin activate rankz
 * **Disable widgets**<br>
   `add_theme_support('rankz-disable-widgets');`
 
-* **Remove WordPress default image sizes**<br>
-  `add_theme_support('rankz-remove-default-image-sizes');`
-
 * **Font Awesome icons on menus**<br>
   `add_theme_support('rankz-font-awesome-menu');`
 
@@ -78,7 +75,6 @@ add_theme_support('rankz-disable-customization');
 add_theme_support('rankz-remove-update-notice');
 add_theme_support('rankz-disable-comments');
 add_theme_support('rankz-disable-widgets');
-add_theme_support('rankz-remove-default-image-sizes');
 add_theme_support('rankz-font-awesome-menu');
 add_theme_support('rankz-admin-login', 'example.com', '#0085ba');
 add_theme_support('rankz-google-analytics', 'UA-XXXXX-Y');
