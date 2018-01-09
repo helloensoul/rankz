@@ -21,30 +21,9 @@ function init() {
     wp_delete_post(1, true);
     // Delete WordPress default page
     wp_delete_post(2, true);
-    // Setup primary menu with home page
-    $menu_exists = wp_get_nav_menu_object('Primary Navigation');
-    if (!$menu_exists) {
-      // Create primary_navigation menu
-      $menu_id = wp_create_nav_menu('Primary Navigation');
-      // Assign primary_navigation to nav menu location created in init.php
-      set_theme_mod('nav_menu_locations', ['primary_navigation' => $menu_id]);
-      $home_page_options = [
-        'post_content'  => 'Home page content.',
-        'post_status'   => 'publish',
-        'post_title'    => 'Home',
-        'post_type'     => 'page'
-      ];
-      if ($home_page_id = wp_insert_post($home_page_options, false)) {
-        update_option('show_on_front', 'page');
-        update_option('page_on_front', $home_page_id);
-        $home_page_id && wp_update_nav_menu_item($menu_id, 0, [
-          'menu-item-title'     => $home_page_options['post_title'],
-          'menu-item-object'    => $home_page_options['post_type'],
-          'menu-item-object-id' => $home_page_id,
-          'menu-item-type'      => 'post_type',
-          'menu-item-status'    => 'publish'
-        ]);
-      }
+    // Create Primary Navigation menu if doesn't exists
+    if (!wp_get_nav_menu_object('Primary Navigation')) {
+      set_theme_mod('nav_menu_locations', ['primary_navigation' => wp_create_nav_menu('Primary Navigation')]);
     }
   }
 }

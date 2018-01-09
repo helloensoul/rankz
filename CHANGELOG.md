@@ -1,5 +1,12 @@
-### HEAD
+### 2.1.0: Gen 9th, 2018
 * Update `itsensoul` organization name with `helloensoul`
+* Re-enable media page in WordPress settings
+* Remove the feature to create and add the `Home` page to the menu
+* Improve `Modules` section in the README.md
+* Don't do `active` fix for CPT if no archive page
+* Improve `remove_dashboard_widgets` function after latest Soil updates
+* Add `Contributing` guidelines in the README.md
+* Add ISSUE_TEMPLATE.md
 
 ### 2.0.0: Nov 7th, 2016
 * Add .gitattributes

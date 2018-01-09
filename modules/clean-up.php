@@ -15,8 +15,12 @@ namespace Ensoul\Rankz\CleanUp;
  */
 function remove_dashboard_widgets() {
   remove_action('welcome_panel', 'wp_welcome_panel'); // Hide Welcome Panel
-  remove_meta_box('dashboard_primary', 'dashboard', 'side'); // Hide WordPress News
-  remove_meta_box('dashboard_quick_press', 'dashboard', 'side'); // Hide Quick Draft
+  remove_meta_box('dashboard_primary', 'dashboard', 'side'); // Hide WordPress.com Blog
+  remove_meta_box('dashboard_secondary', 'dashboard', 'normal'); // Hide other WordPress News
+  remove_meta_box('dashboard_plugins', 'dashboard', 'normal'); // Hide Plugins
+  remove_meta_box('dashboard_incoming_links', 'dashboard', 'normal'); // Hide Incoming Links
+  remove_meta_box('dashboard_quick_press', 'dashboard', 'side'); // Hide Quick Press
+  remove_meta_box('dashboard_recent_drafts', 'dashboard', 'side'); // Hide Recent Drafts
   remove_meta_box('dashboard_right_now', 'dashboard', 'normal'); // Hide At a Glance
   remove_meta_box('dashboard_activity', 'dashboard', 'normal'); // Hide Activity
 }
