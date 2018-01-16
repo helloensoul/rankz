@@ -43,8 +43,8 @@ wp plugin activate rankz
 * **Clean WordPress**<br>
   `add_theme_support('rankz-clean-up');`
 
-* **Disable WordPress customization**<br>
-  `add_theme_support('rankz-disable-customization');`
+* **Disable Customizer**<br>
+  `add_theme_support('rankz-disable-customizer');`
 
 * **Disable core update notice for non admin users**<br>
   `add_theme_support('rankz-disable-update-notice');`
@@ -71,7 +71,7 @@ And in a format you can copy & paste into your theme:
  */
 add_theme_support('rankz-init');
 add_theme_support('rankz-clean-up');
-add_theme_support('rankz-disable-customization');
+add_theme_support('rankz-disable-customizer');
 add_theme_support('rankz-disable-update-notice');
 add_theme_support('rankz-disable-comments');
 add_theme_support('rankz-disable-widgets');
