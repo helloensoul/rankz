@@ -1,4 +1,4 @@
-### HEAD
+### 3.0.0: Gen 16th, 2018
 * Improve `admin-login` module to work with [Sage 9](https://github.com/roots/sage)
 * Remove `bootstrap-nav-walker` module
 * Remove `remove-default-image-sizes` module
