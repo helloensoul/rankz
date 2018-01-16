@@ -55,13 +55,13 @@ wp plugin activate rankz
 * **Disable widgets**<br>
   `add_theme_support('rankz-disable-widgets');`
 
-* **Font Awesome icons on menus**<br>
+* **Add Font Awesome icons to menu** ([more info](https://github.com/helloensoul/rankz/wiki/Add-Font-Awesome-icons-to-menu))<br>
   `add_theme_support('rankz-font-awesome-menu');`
 
 * **Admin login customization** ([more info](https://github.com/helloensoul/rankz/wiki/Admin-login-customization))<br>
   `add_theme_support('rankz-admin-login', '#e50040', 'dist/images/login-logo.png', 'https://example.com');`
 
-* **Google Analytics with anonymized IP** ([more info](https://github.com/helloensoul/rankz/wiki/Google-Analytics))<br>
+* **Google Analytics with anonymizeIP** ([more info](https://github.com/helloensoul/rankz/wiki/Google-Analytics-with-anonymizeIP))<br>
   `add_theme_support('rankz-google-analytics', 'UA-XXXXX-Y');`
 
 And in a format you can copy & paste into your theme:

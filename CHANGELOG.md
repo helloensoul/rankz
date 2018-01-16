@@ -6,6 +6,7 @@
 * Rename `disable-customization` to `disable-customizer`
 * Improve `admin-login` module with more customization
 * Improve some modules functions
+* Improve `Modules` section in the README.md with links to the Wiki
 
 ### 2.1.0: Gen 9th, 2018
 * Update `itsensoul` organization name with `helloensoul`
