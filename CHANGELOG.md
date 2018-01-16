@@ -4,6 +4,7 @@
 * Remove `remove-default-image-sizes` module
 * Rename `remove-update-notive` to `disable-update-notice`
 * Rename `disable-customization` to `disable-customizer`
+* Improve `admin-login` module with more customization
 
 ### 2.1.0: Gen 9th, 2018
 * Update `itsensoul` organization name with `helloensoul`

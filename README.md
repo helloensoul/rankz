@@ -58,8 +58,8 @@ wp plugin activate rankz
 * **Font Awesome icons on menus**<br>
   `add_theme_support('rankz-font-awesome-menu');`
 
-* **Admin login**<br>
-  `add_theme_support('rankz-admin-login', 'example.com', '#0085ba');`
+* **Admin login customization** ([more info](https://github.com/helloensoul/rankz/wiki/Admin-login-customization))<br>
+  `add_theme_support('rankz-admin-login', '#e50040', 'dist/images/login-logo.png', 'https://example.com');`
 
 * **Google Analytics with anonymized IP** ([more info](https://github.com/helloensoul/rankz/wiki/Google-Analytics))<br>
   `add_theme_support('rankz-google-analytics', 'UA-XXXXX-Y');`
@@ -76,7 +76,7 @@ add_theme_support('rankz-disable-update-notice');
 add_theme_support('rankz-disable-comments');
 add_theme_support('rankz-disable-widgets');
 add_theme_support('rankz-font-awesome-menu');
-add_theme_support('rankz-admin-login', 'example.com', '#0085ba');
+add_theme_support('rankz-admin-login', '#e50040', 'dist/images/login-logo.png', 'https://example.com');
 add_theme_support('rankz-google-analytics', 'UA-XXXXX-Y');
 ```
 
