@@ -2,6 +2,7 @@
 * Improve `admin-login` module to work with [Sage 9](https://github.com/roots/sage)
 * Remove `bootstrap-nav-walker` module
 * Remove `remove-default-image-sizes` module
+* Rename `remove-update-notive` to `disable-update-notice`
 
 ### 2.1.0: Gen 9th, 2018
 * Update `itsensoul` organization name with `helloensoul`
